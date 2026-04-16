@@ -1,0 +1,104 @@
+/*Table*/
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table caption{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+table th, table td{
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+table th{
+  background-color: #0077cc;
+  color: white;
+}
+
+table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+/*Form*/
+form{
+  margin-top: 15px;
+}
+
+fieldset{
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+legend{
+  font-weight: bold;
+  color: #444;
+}
+
+label{
+  display: block;
+  margin-top: 10px;
+}
+
+/*Input*/
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/*Buttons*/
+button{
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #218838;
+}
+
+/*Details*/
+details{
+  margin-top: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+/*Food log table*/
+.foodLog table{
+  margin-top: 10px;
+}
+
+/*Water section*/
+.water p{
+  margin-top: 10px;
+}
+
+/*Diest plan card*/
+.weightLossDiet, .weightGainDiet, .maintenanceDiet{
+  border-left: 5px solid #00bcd4;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+/*AI*/
+.AIDiet article{
+  margin-top: 10px;
+  padding: 10px;
+  border-left: 4px solid #ff9800;
+}

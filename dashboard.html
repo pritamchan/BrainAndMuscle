@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your personal fitness dashboard on FitForAll." />
+  <title>Brain and Muscle | Dashboard</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+  <!--Header-->
+  <header>
+    <h1>Brain and Muscle</h1>
+    <p>AI-Powered Fitness Platform</p>
+
+    <nav class="siteNavigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gymWorkout.html">Workout at Gym</a></li>
+        <li><a href="homeWorkout.html">Workout at Home</a></li>
+        <li><a href="dietPlanner.html">Diet Planner</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html">Login / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+  <main>
+    <section class="dashboard">
+      <h2 id="dashboard">📊 Your Dashboard</h2>
+      <p>
+        Welcome back! Here you can track your fitness progress, view your stats,
+        browse the Brain and Muscle community (anonymous usernames only), and access
+        AI-powered recommendations.
+      </p>
+    </section>
+
+    <section class="quickStats">
+      <h2 id="quickStats">⚡ Your Quick Stats</h2>
+      <p><em>Log in to see your personalised statistics.</em></p>
+
+      <table border="black">
+        <caption>Stats</caption>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+            <th>Last Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Username</td>
+            <td><em>[Your anonymous username]</em></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Age Group</td>
+            <td><em>[Kids / Adult / Senior]</em></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Current Weight</td>
+            <td><em>- - kg</em></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Goal</td>
+            <td><em>[Weight Loss / Gain / Maintenance]</em></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Workouts This Week</td>
+            <td><em>0</em></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Calories Today</td>
+            <td><em>0 kcal</em></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Streak (consecutive active days)</td>
+            <td><em>0 days</em></td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Link to full profile -->
+      <p><a href="profile.html" target="_blank">View &amp; Edit My Full Profile →</a></p>
+    </section>
+
+    <hr>
+
+    <section class="AI">
+      <h2 id="AI">🤖 AI Personalizations</h2>
+      <p>
+        Based on your profile, body analysis, and logged activity, our AI will
+        generate the following personalised suggestions.
+      </p>
+
+      <article class="aiWorkout">
+        <h3 id="aiWorkout">🏋️ Recommended Workout for Today</h3>
+        <p><em>[AI-generated workout recommendation will appear here.]</em></p>
+        <p>Placeholder: Upper Body Strength Session - 45 minutes - Intermediate</p>
+      </article>
+
+      <article class="aiDiet">
+        <h3 id="aiDiet">🥗 Recommended Meal Plan for Today</h3>
+        <p><em>[AI-generated meal plan will appear here.]</em></p>
+        <p>Placeholder: 1,800 kcal plan - High protein, moderate carbs</p>
+      </article>
+
+      <article class="aiWeight">
+        <h3 id="aiWeight">📉 Weight Loss Suggestions</h3>
+        <p><em>[AI-generated weight loss analysis will appear here.]</em></p>
+      </article>
+
+      <article class="aiGain">
+        <h3 id="aiGain">📈 Weight Gain Suggestions</h3>
+        <p><em>[AI-generated muscle gain analysis will appear here.]</em></p>
+      </article>
+
+      <article class="aiMaintenance">
+        <h3 id="aiMaintenance">⚖️ Maintenance Suggestions</h3>
+        <p><em>[AI-generated maintenance plan will appear here.]</em></p>
+      </article>
+
+      <hr>
+      <!-- Upload picture for AI analysis -->
+      <article class="aiPictureUpload">
+        <h3 id="aiPictureUpload">📷 Update Body Analysis Photo</h3>
+        <p>
+          Upload a current full-body photo for a fresh AI analysis. This image is
+          private and never visible to other users.
+        </p>
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div>
+            <label for="dashboardPhoto">Upload Photo</label>
+            <input type="file" id="dashboardPhoto" name="dashboard_photo" accept="image/jpeg, image/png, image/webp"/>
+            <small>Accepted: JPEG, PNG, WebP. Max 5 MB.</small>
+          </div>
+          <div>
+            <button type="submit">Analyse Photo</button>
+          </div>
+        </form>
+
+        <!-- AI analysis result -->
+        <div id="dashboardAIResult">
+          <p><em>Analysis results will appear here after uploading a photo.</em></p>
+        </div>
+      </article>
+    </section>
+
+    <hr>
+    <section class="progress">
+      <h2 id="progress">📈 Your Progress Over Time</h2>
+
+      <article>
+        <h3>Weight Trend</h3>
+        <p><em>[Line chart showing weight over time will be rendered here.]</em></p>
+      </article>
+
+      <article>
+        <h3>Calorie Intake vs. Target</h3>
+        <p><em>[Bar chart comparing daily calorie intake to target will be rendered here.]</em></p>
+      </article>
+
+      <article>
+        <h3>Workout Frequency</h3>
+        <p><em>[Weekly workout frequency chart will be rendered here.]</em></p>
+      </article>
+    </section>
+
+    <hr>
+    <!--Community Leaderboard-->
+    <section class="communityLeaderboard">
+      <h2 id="communityLeaderboard">🏆 Brain and Muscle Community</h2>
+      <p>
+        A list of active members in our community. For privacy, only usernames
+        are shown here. Your real name is <strong>never</strong> visible to others.
+      </p>
+
+      <table border="black">
+        <caption>Active Brain and Muscle Members</caption>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Age Group</th>
+            <th>Primary Goal</th>
+            <th>Workouts This Month</th>
+            <th>Member Since</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--Rows – I will populate this from database -->
+          <tr>
+            <td>1</td>
+            <td><a href="profile.html" target="_blank">T</a></td>
+            <td>Adult</td>
+            <td>Muscle Gain</td>
+            <td>AI</td>
+            <td>MAR 2026</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="profile.html" target="_blank">Pritam</a></td>
+            <td>Adult</td>
+            <td>Endurance</td>
+            <td>AI</td>
+            <td>MAR 2026</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="profile.html" target="_blank">Baggy</a></td>
+            <td>Teenager</td>
+            <td>Weight Loss</td>
+            <td>AI</td>
+            <td>NOV 2025</td>
+          </tr>
+          <tr>
+            <td colspan="6"><em>Showing 3 of registered members. Log in to see more.</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+    <section class="activityLog">
+      <h2 id="activityLog">🗓️ Your Recent Activity</h2>
+      <p><em>Log in to see your personal workout and diet history.</em></p>
+
+      <table>
+        <caption>Recent Activity Log</caption>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Activity</th>
+            <th>Duration</th>
+            <th>Calories Burned</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="5"><em>No recent activity logged. Start a workout to track here.</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+    <section class="quickActions">
+      <h2 id="quickActions">⚡ Quick Actions</h2>
+      <nav>
+        <ul>
+          <li><a href="gymWorkout.html">Start a Gym Workout</a></li>
+          <li><a href="homeWorkout.html">Start a Home Workout</a></li>
+          <li><a href="dietPlanner.html">Log a Meal</a></li>
+          <li><a href="profile.html">Edit My Profile</a></li>
+          <li><a href="login.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </section>
+
+  </main>
+
+  <hr>
+  <!--Footer-->
+  <footer>
+    <p>&copy; 2026 Brain and Muscle. All rights reserved.</p>
+    <nav class="footerNavigation">
+      <ul>
+        <li><a href="privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+        <li><a href="termsOfService.html" target="_blank">Terms of Service</a></li>
+        <li><a href="contactUs.html" target="_blank">Contact Us</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <p>Engineered by Pritam.</p>
+  </footer>
+
+</body>
+</html>

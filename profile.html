@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your personal profile on Brian and Muscle - manage your details and view AI recommendations." />
+  <title>Brain and Muscle | My Profile</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>Brain and Muscle</h1>
+    <p>AI-Powered Fitness Platform</p>
+
+    <nav class="navigation1">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gymWorkout.html">Workout at Gym</a></li>
+        <li><a href="homeWorkout.html">Workout at Home</a></li>
+        <li><a href="dietPlanner.html">Diet Planner</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html">Login / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         PAGE TITLE
+    ============================================================ -->
+    <section aria-labelledby="profile-heading">
+      <h2 id="profile-heading">👤 My Profile</h2>
+      <p>
+        Manage your personal information, fitness goals, and account settings.
+        Your real name and private details are <strong>only visible to you</strong>.
+        Other community members see only your chosen username.
+      </p>
+    </section>
+
+    <!-- ============================================================
+         PUBLIC PROFILE CARD
+         Visible to all users (other members can see this section
+         when browsing the community). Contains only anonymous info.
+    ============================================================ -->
+    <section aria-labelledby="public-profile-heading">
+      <h2 id="public-profile-heading">🌐 Public Profile (Visible to Everyone)</h2>
+
+      <article>
+        <!-- Avatar placeholder (image upload will be handled in Phase 3) -->
+        <figure>
+          <img
+            src=""
+            alt="Profile avatar for [Username]. No image uploaded yet."
+            width="120"
+            height="120"
+          />
+          <figcaption>Profile Photo (visible to all)</figcaption>
+        </figure>
+
+        <dl>
+          <dt>Username</dt>
+          <dd><strong>IronPhoenix_88</strong> <em>(Placeholder – your username appears here)</em></dd>
+
+          <dt>Age Group</dt>
+          <dd>Adult (Ages 15–59)</dd>
+
+          <dt>Primary Fitness Goal</dt>
+          <dd>Muscle Gain</dd>
+
+          <dt>Member Since</dt>
+          <dd>January 2025</dd>
+
+          <dt>Workouts Completed</dt>
+          <dd>42</dd>
+
+          <dt>Current Streak</dt>
+          <dd>7 days 🔥</dd>
+        </dl>
+
+        <!-- Fitness Badges (Phase 3 will award these dynamically) -->
+        <article aria-labelledby="badges-heading">
+          <h3 id="badges-heading">🏅 Badges Earned</h3>
+          <ul>
+            <li>🔥 7-Day Streak</li>
+            <li>💪 First Gym Workout</li>
+            <li>🥗 First Meal Logged</li>
+            <!-- More badges will be dynamically awarded in Phase 3 -->
+          </ul>
+        </article>
+      </article>
+    </section>
+
+    <!-- ============================================================
+         PRIVATE PROFILE SECTION
+         VISIBLE ONLY TO THE AUTHENTICATED USER (enforced in Phase 3).
+         A prominent notice communicates this clearly.
+    ============================================================ -->
+    <section aria-labelledby="private-profile-heading">
+      <h2 id="private-profile-heading">🔒 Private Information (Only You Can See This)</h2>
+
+      <p>
+        <strong>Privacy Notice:</strong> The information below is stored securely and is
+        <em>never shared</em> with other platform users or third parties. Only you can see
+        this section when logged in to your account.
+      </p>
+
+      <article aria-labelledby="personal-info-heading">
+        <h3 id="personal-info-heading">Personal Details</h3>
+
+        <dl>
+          <dt>First Name</dt>
+          <dd><em>[Your first name – visible only to you]</em></dd>
+
+          <dt>Last Name</dt>
+          <dd><em>[Your last name – visible only to you]</em></dd>
+
+          <dt>Email Address</dt>
+          <dd><em>[your@email.com – visible only to you]</em></dd>
+
+          <dt>Phone Number</dt>
+          <dd><em>[Optional – visible only to you]</em></dd>
+
+          <dt>Date of Birth / Age</dt>
+          <dd><em>[Your age – visible only to you]</em></dd>
+
+          <dt>Gender Identity</dt>
+          <dd><em>[Your selection – visible only to you]</em></dd>
+        </dl>
+      </article>
+
+      <article aria-labelledby="physical-stats-heading">
+        <h3 id="physical-stats-heading">Physical Statistics</h3>
+
+        <dl>
+          <dt>Height</dt>
+          <dd><em>– – cm</em></dd>
+
+          <dt>Current Weight</dt>
+          <dd><em>– – kg</em></dd>
+
+          <dt>Starting Weight</dt>
+          <dd><em>– – kg</em></dd>
+
+          <dt>Target Weight</dt>
+          <dd><em>– – kg</em></dd>
+
+          <dt>BMI (calculated)</dt>
+          <dd><em>– – (Phase 3)</em></dd>
+
+          <dt>Body Fat % (AI estimated)</dt>
+          <dd><em>– – % (Phase 3)</em></dd>
+        </dl>
+      </article>
+
+    </section>
+
+    <!-- ============================================================
+         EDIT PROFILE FORM
+         Allows the user to update their personal details.
+    ============================================================ -->
+    <section aria-labelledby="edit-profile-heading">
+      <h2 id="edit-profile-heading">✏️ Edit My Profile</h2>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+
+        <!-- ── PERSONAL DETAILS ─────────────────────────────── -->
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <div>
+            <label for="edit-first-name">First Name</label>
+            <input
+              type="text"
+              id="edit-first-name"
+              name="first_name"
+              placeholder="e.g. Alex"
+              autocomplete="given-name"
+            />
+          </div>
+
+          <div>
+            <label for="edit-last-name">Last Name</label>
+            <input
+              type="text"
+              id="edit-last-name"
+              name="last_name"
+              placeholder="e.g. Johnson"
+              autocomplete="family-name"
+            />
+          </div>
+
+          <div>
+            <label for="edit-email">Email Address</label>
+            <input
+              type="email"
+              id="edit-email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <div>
+            <label for="edit-phone">Phone Number <em>(optional)</em></label>
+            <input
+              type="tel"
+              id="edit-phone"
+              name="phone"
+              placeholder="e.g. +91 98765 43210"
+              autocomplete="tel"
+            />
+          </div>
+
+        </fieldset>
+
+        <!-- ── PHYSICAL STATS ────────────────────────────────── -->
+        <fieldset>
+          <legend>Update Physical Stats</legend>
+          <p>Keeping these updated ensures your AI recommendations remain accurate.</p>
+
+          <div>
+            <label for="edit-age">Age (years)</label>
+            <input type="number" id="edit-age" name="age" min="4" max="120" placeholder="e.g. 28" />
+          </div>
+
+          <div>
+            <label for="edit-weight">Current Weight</label>
+            <input type="number" id="edit-weight" name="weight" min="10" max="500" placeholder="e.g. 72" />
+            <select id="edit-weight-unit" name="weight_unit" aria-label="Weight unit">
+              <option value="kg">kg</option>
+              <option value="lbs">lbs</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="edit-target-weight">Target Weight</label>
+            <input type="number" id="edit-target-weight" name="target_weight" min="10" max="500" placeholder="e.g. 68" />
+            <select id="edit-target-weight-unit" name="target_weight_unit" aria-label="Target weight unit">
+              <option value="kg">kg</option>
+              <option value="lbs">lbs</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="edit-height">Height</label>
+            <input type="number" id="edit-height" name="height" min="50" max="300" placeholder="e.g. 175" />
+            <select id="edit-height-unit" name="height_unit" aria-label="Height unit">
+              <option value="cm">cm</option>
+              <option value="ft">ft</option>
+            </select>
+          </div>
+
+        </fieldset>
+
+        <!-- ── PREFERENCES ───────────────────────────────────── -->
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <div>
+            <label for="edit-gender">Gender Identity</label>
+            <select id="edit-gender" name="gender">
+              <option value="">-- Select --</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="transgender">Transgender</option>
+              <option value="non-binary">Non-Binary</option>
+              <option value="prefer-not-to-say">Prefer Not to Say</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="edit-goal">Primary Fitness Goal</label>
+            <select id="edit-goal" name="fitness_goal">
+              <option value="">-- Select --</option>
+              <option value="weight-loss">Weight Loss</option>
+              <option value="weight-gain">Weight / Muscle Gain</option>
+              <option value="maintenance">Maintenance</option>
+              <option value="endurance">Endurance &amp; Stamina</option>
+              <option value="flexibility">Flexibility &amp; Mobility</option>
+              <option value="general-health">General Health</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="edit-activity">Activity Level</label>
+            <select id="edit-activity" name="activity_level">
+              <option value="">-- Select --</option>
+              <option value="sedentary">Sedentary</option>
+              <option value="light">Lightly Active</option>
+              <option value="moderate">Moderately Active</option>
+              <option value="very-active">Very Active</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="edit-username">Username (shown publicly)</label>
+            <input
+              type="text"
+              id="edit-username"
+              name="username"
+              placeholder="e.g. IronPhoenix_88"
+              autocomplete="username"
+            />
+          </div>
+
+        </fieldset>
+
+        <!-- ── PROFILE / AVATAR PHOTO ────────────────────────── -->
+        <fieldset>
+          <legend>Profile Photo (Public Avatar)</legend>
+          <p>This photo is visible to all users as your avatar. Keep it appropriate.</p>
+
+          <div>
+            <label for="edit-avatar">Upload Avatar Photo</label>
+            <input
+              type="file"
+              id="edit-avatar"
+              name="avatar"
+              accept="image/jpeg, image/png, image/webp"
+            />
+            <small>Accepted: JPEG, PNG, WebP. Recommended: 300×300 px. Max 2 MB.</small>
+          </div>
+        </fieldset>
+
+        <!-- ── AI BODY PHOTO (PRIVATE) ───────────────────────── -->
+        <fieldset>
+          <legend>🤖 AI Analysis Photo (Private)</legend>
+          <p>
+            This photo is used <em>only</em> for AI body composition analysis.
+            It is <strong>never visible to other users</strong>.
+          </p>
+
+          <div>
+            <label for="edit-ai-photo">Upload / Update AI Analysis Photo</label>
+            <input
+              type="file"
+              id="edit-ai-photo"
+              name="ai_photo"
+              accept="image/jpeg, image/png, image/webp"
+            />
+            <small>Accepted: JPEG, PNG, WebP. Max 5 MB. Full-body photo recommended.</small>
+          </div>
+
+          <!-- AI Analysis Result placeholder -->
+          <div id="profile-ai-result" aria-live="polite">
+            <h4>AI Analysis Results</h4>
+            <article>
+              <h5>📉 Weight Loss Recommendations</h5>
+              <p><em>[AI results will appear here in Phase 3]</em></p>
+            </article>
+            <article>
+              <h5>📈 Weight Gain Recommendations</h5>
+              <p><em>[AI results will appear here in Phase 3]</em></p>
+            </article>
+            <article>
+              <h5>⚖️ Maintenance Suggestions</h5>
+              <p><em>[AI results will appear here in Phase 3]</em></p>
+            </article>
+          </div>
+        </fieldset>
+
+        <!-- ── CHANGE PASSWORD ───────────────────────────────── -->
+        <fieldset>
+          <legend>Change Password</legend>
+
+          <div>
+            <label for="current-password">Current Password</label>
+            <input
+              type="password"
+              id="current-password"
+              name="current_password"
+              placeholder="Enter your current password"
+              autocomplete="current-password"
+            />
+          </div>
+
+          <div>
+            <label for="new-password">New Password</label>
+            <input
+              type="password"
+              id="new-password"
+              name="new_password"
+              placeholder="Minimum 8 characters"
+              minlength="8"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div>
+            <label for="confirm-new-password">Confirm New Password</label>
+            <input
+              type="password"
+              id="confirm-new-password"
+              name="confirm_new_password"
+              placeholder="Re-enter new password"
+              minlength="8"
+              autocomplete="new-password"
+            />
+          </div>
+        </fieldset>
+
+        <!-- Submit -->
+        <div>
+          <button type="submit">Save Changes</button>
+          <a href="dashboard.html">Cancel</a>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- ============================================================
+         AGE-BASED UI PERSONALISATION PLACEHOLDER
+         In Phase 3 the interface will adapt colours, text size, and
+         recommended content based on the user's age group.
+    ============================================================ -->
+    <section aria-labelledby="age-adapt-heading">
+      <h2 id="age-adapt-heading">🎨 Age-Adapted Interface (Phase 3 Feature)</h2>
+      <p>
+        When Phase 3 launches, the platform UI will automatically adapt:
+      </p>
+      <ul>
+        <li><strong>Kids (6–14):</strong> Larger fonts, bright colours, playful animations, simplified language.</li>
+        <li><strong>Adults (15–59):</strong> Standard interface, full feature set.</li>
+        <li><strong>Seniors (60+):</strong> High contrast, larger font sizes, simplified navigation, joint-safe content warnings.</li>
+      </ul>
+      <p><em>Your current age group: <strong>[Detected from your profile]</strong></em></p>
+    </section>
+
+    <!-- ============================================================
+         DANGER ZONE – ACCOUNT DELETION
+    ============================================================ -->
+    <section aria-labelledby="danger-heading">
+      <h2 id="danger-heading">⚠️ Danger Zone</h2>
+      <p>
+        These actions are <strong>irreversible</strong>. Please proceed with caution.
+      </p>
+
+      <article>
+        <h3>Delete My Account</h3>
+        <p>
+          Permanently deletes your account and all associated data. This action
+          cannot be undone. You will lose all workout history, meal logs, and
+          AI analysis results.
+        </p>
+        <form action="#" method="post">
+          <div>
+            <label for="delete-confirm">
+              Type your username to confirm:
+            </label>
+            <input
+              type="text"
+              id="delete-confirm"
+              name="delete_confirm"
+              placeholder="Type your username here"
+            />
+          </div>
+          <div>
+            <button type="submit">Delete My Account Permanently</button>
+          </div>
+        </form>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <p>&copy; 2025 FitForAll. All rights reserved.</p>
+    <nav aria-label="Footer Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

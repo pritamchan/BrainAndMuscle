@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login or create your FitForAll account." />
+  <title>Brain and Muscle | Login or Sign Up</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <!--Header-->
+  <header>
+    <h1>Brain and Muscle</h1>
+    <p>AI-Powered Fitness Platform</p>
+
+    <nav class="siteNavigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gymWorkout.html">Workout at Gym</a></li>
+        <li><a href="homeWorkout.html">Workout at Home</a></li>
+        <li><a href="dietPlanner.html">Diet Planner</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html">Login / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+  <!--Main-->
+  <main>
+    <section class="login">
+      <h2 id="auth-page-heading">Your Account</h2>
+      <p>Log in to access your dashboard, or create a new account to get started.</p>
+    </section>
+
+    <nav>
+      <ul>
+        <li><a href="login.html" target="_blank">Log In</a></li>
+        <li><a href="registration.html" target="_blank">Create Account</a></li>
+      </ul>
+    </nav>
+
+    <section class="register">
+      <h2 id="login">Log In</h2>
+
+      <form action="#" method="post">
+
+        <!--Email-->
+        <div>
+          <label for="loginEmail">Email Address *</label>
+          <input type="email" id="loginEmail" name="login_email" placeholder="you@example.com" required autocomplete="email"/>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label for="loginPassword">Password *</label>
+          <input type="password" id="loginPassword" name="login_password" placeholder="Enter your password" required autocomplete="current-password"/>
+        </div>
+
+        <!-- Remember Me -->
+        <div>
+          <input type="checkbox" id="rememberMe" name="remember_me" />
+          <label for="rememberMe">Remember me on this device</label>
+        </div>
+
+        <!-- Submit -->
+        <div>
+          <button type="submit">Log In</button>
+        </div>
+
+        <!-- Forgot Password Placeholder -->
+        <p><a href="forgetPassword.html" target="_blank">Forgot your password?</a></p>
+
+      </form>
+    </section>
+
+    <hr>
+    <section>
+      <h2 id="registeration">Create Your Account</h2>
+      <p>All fields marked with * are required.</p>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+
+        <!--Personal details-->
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <!--First name-->
+          <div>
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="first_name" placeholder="e.g. Pritam" required autocomplete="givenName"/>
+          </div>
+
+          <!--Last name-->
+          <div>
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="last_name" placeholder="e.g. Morey" required/>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="registrationEmail">Email Address *</label>
+            <input type="email" id="registrationEmail" name="email" placeholder="you@example.com" required autocomplete="email"/>
+          </div>
+
+          <!--Phone-->
+          <div>
+            <label for="phone">Phone Number <em>(optional)</em></label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. +91 88568 06544" autocomplete="tel"/>
+          </div>
+
+        </fieldset>
+
+        <hr>
+        <!--Physical stats-->
+        <fieldset>
+          <legend>Physical Stats</legend>
+          <p>This information helps us personalise your fitness plan.</p>
+
+          <!--Age-->
+          <div>
+            <label for="age">Age (years) *</label>
+            <input type="number" id="age" name="age" min="1" max="120" placeholder="e.g. 21" required/>
+          </div>
+
+          <!--Weight-->
+          <div>
+            <label for="weight">Weight *</label>
+            <input type="number" id="weight" name="weight" min="10" max="500" placeholder="e.g. 90" required/>
+            <!--Unit of weight-->
+            <select id="weightUnit" name="weight_unit">
+              <option value="kg">kg</option>
+              <option value="lbs">lbs</option>
+            </select>
+          </div>
+
+          <!--Height-->
+          <div>
+            <label for="height">Height <span aria-label="required">*</span></label>
+            <input type="number" id="height" name="height" min="50" max="300" placeholder="e.g. 177" required/>
+            <!--Unit of height-->
+            <select id="heightUnit" name="height_unit">
+              <option value="cm">cm</option>
+              <option value="ft">ft</option>
+            </select>
+          </div>
+
+        </fieldset>
+
+        <!--Identity and preferences-->
+        <fieldset>
+          <legend>Identity &amp; Preferences</legend>
+          <p>
+            We ask these questions to personalise your experience. All options are
+            equally valued on our platform.
+          </p>
+
+          <!--Gender-->
+          <div>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="">-- Please select --</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="transgender">Transgender</option>
+              <option value="nonBinary">Non-Binary</option>
+              <option value="preferNotToSay">Prefer Not to Say</option>
+            </select>
+          </div>
+
+          <!--Age Group-->
+          <div>
+            <label for="ageGroup">Age Group</label>
+            <select id="ageGroup" name="age_group">
+              <option value="">-- Please select --</option>
+              <option value="kids">Kids (6-14)</option>
+              <option value="adults">Adults (15-59)</option>
+              <option value="seniors">Seniors (60+)</option>
+            </select>
+          </div>
+
+          <!--Goal-->
+          <div>
+            <label for="Goal">Goal</label>
+            <select id="Goal" name="fitness_goal">
+              <option value="">-- Please select --</option>
+              <option value="weightLoss">Weight Loss</option>
+              <option value="weightGain">Weight / Muscle Gain</option>
+              <option value="maintenance">Maintenance</option>
+              <option value="endurance">Endurance &amp; Stamina</option>
+              <option value="flexibility">Flexibility &amp; Mobility</option>
+              <option value="generalHealth">General Health</option>
+            </select>
+          </div>
+
+          <!--Activity Level-->
+          <div>
+            <p>Current Activity Level:</p>
+            <div>
+              <input type="radio" id="level-sedentary" name="activity_level" value="sedentary" />
+              <label for="level-sedentary">Sedentary (little or no exercise)</label>
+            </div>
+            <div>
+              <input type="radio" id="level-light" name="activity_level" value="light" />
+              <label for="level-light">Lightly Active (1-3 days/week)</label>
+            </div>
+            <div>
+              <input type="radio" id="level-moderate" name="activity_level" value="moderate" />
+              <label for="level-moderate">Moderately Active (3-5 days/week)</label>
+            </div>
+            <div>
+              <input type="radio" id="level-very" name="activity_level" value="very-active" />
+              <label for="level-very">Very Active (6-7 days/week)</label>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <!--ACC. Security-->
+        <fieldset>
+          <legend>Account Security</legend>
+
+          <!--Username (will appear anonymously on dashboard)-->
+          <div>
+            <label for="username"> Choose a Username *<small>(This is what other users see - keep it anonymous if you prefer)</small></label>
+            <input type="text" id="username" name="username" placeholder="e.g. BrainAndMuscle" required autocomplete="username"/>
+          </div>
+
+          <!--Password-->
+          <div>
+            <label for="registerPassword">Password *</label>
+            <input type="password" id="registerPassword" name="password" placeholder="Minimum 8 characters" minlength="8" required/>
+          </div>
+
+          <!--Confirm password-->
+          <div>
+            <label for="confirmPassword">Confirm Password *</label>
+            <input type="password" id="confirmPassword" name="confirm_password" placeholder="Re-enter your password" minlength="8" required/>
+          </div>
+
+        </fieldset>
+
+        <hr>
+        <fieldset>
+          <legend>🤖 AI Body Analysis</legend>
+          <p>
+            Upload a full-body photo so our AI can analyse your body composition
+            and provide personalised recommendations. This image is private and
+            never shared with other users.
+          </p>
+
+          <div>
+            <label for="bodyPhoto">Upload Body Photo <em>(optional)</em></label>
+            <input type="file" id="bodyPhoto" name="body_photo" accept="image/jpeg, image/png, image/webp"/>
+            <small>Accepted formats: JPEG, PNG, WebP. Max size: 5 MB.</small>
+          </div>
+
+          <!--AI analysis resullts-->
+          <div id="AIAnalysis">
+            <p><em>AI analysis results will appear here after processing.</em></p>
+            <!--Sub-sections for each AI recommendation type-->
+            <article>
+              <h4>📉 Weight Loss Recommendations</h4>
+              <p><em>[AI-generated content will appear here.]</em></p>
+            </article>
+            <article>
+              <h4>📈 Weight Gain Recommendations</h4>
+              <p><em>[AI-generated content will appear here.]</em></p>
+            </article>
+            <article>
+              <h4>⚖️ Maintenance Suggestions</h4>
+              <p><em>[AI-generated content will appear here.]</em></p>
+            </article>
+          </div>
+        </fieldset>
+
+        <!--Agreement-->
+        <fieldset>
+          <legend>Agreements</legend>
+
+          <div>
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms"> I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>*</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="notification" name="newsletter" />
+            <label for="notification">I'd like to receive fitness tips, updates, and offers via email. <em>(optional)</em></label>
+          </div>
+        </fieldset>
+
+        <!--Submit-->
+        <div>
+          <button type="submit">Create My Account</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <hr>
+  <!--Footer-->
+  <footer>
+    <p>&copy; 2026 Brain and Muscle. All rights reserved.</p>
+    <nav class="footerNavigation">
+      <ul>
+        <li><a href="privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+        <li><a href="termsOfService.html" target="_blank">Terms of Service</a></li>
+        <li><a href="contactUs.html" target="_blank">Contact Us</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <p>Engineered by Pritam.</p>
+  </footer>
+
+</body>
+</html>
